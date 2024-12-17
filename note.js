@@ -1,5 +1,7 @@
 // data types in javaScript
 
+
+
 // premitive data type
 1 - String;
 2 - Number;
@@ -680,20 +682,24 @@ const obj = new Object();
 // How does javascript execute code + call stack
 
 // javaScript executaion  context
-// 1 Global EC
+
+// 1 Global executaion  context
 // is global ec ko this ka jo variable hai iske andr rk diya jata hai
-// 2 function EC
-// 3 Eval EC
+// 2 function executaion  context
+
+// 3 Eval executaion  context
 
 // javascript code run in two phasis
 // 1 memory creation phase => isme sirf memory alocation hota hai
 // 2 execution phase
 
-// csll stack ke and lifo last in out first ka concept chalta hain
+// javaScript ka code run hone ke bad all execution phase delete hojata hai
 
-// 1. global ec
+// csll stack me ifo last in out first ka concept chalta hain
+ 
+// 1. global ex
 // 2. memory alocation
-// 3. eval ec
+// 3. eval ex
 
 // +++++++++++++++ class 26 ++++++++++++++++
 // Control flow in javascript
@@ -840,4 +846,547 @@ const obj = new Object();
 //     console.log(index);
 // }
 
+// for (let index = 0; index <+ 10; index++) {
+
+//   for (let j = 1; j <= 5; j= j+ 2) {
+//     console.log(j);
+    
+//   }
+  
+// }
+
+// +++++++++++++++ class 28 ++++++++++++++
+// While and do while loop in Javascript
+
+// let index = 0
+//  while (index <= 20) {
+//   console.log(`value of index is ${index}`);
+  
+//   index = index + 10
+//  }
+
+// let index = 1
+// do{
+//   console.log(`value of index is ${index}`);
+//   index++
+// } while ( index <= 15)
  
+// +++++++++++++++ class 29 +++++++++++++++++++++
+// High Order Array loops 
+
+
+// for in loop
+// for of loop
+// forEach loop
+
+// const arr = [2,3,4,5,6,7,8,89,10]
+
+// for (const arrNum of arr) {
+//   console.log(arrNum);
+  
+// }
+
+let str = "hello world"
+
+for (const strValue of str) {
+  //  console.log(strValue);
+ 
+}
+
+const map = new Map()
+map.set("pak", "Pakistan")
+map.set("ind", "India")
+map.set("fr", "France")
+
+// console.log(map);
+
+// for (const [key,val] of map) {
+//   console.log(val );
+// }
+
+
+
+// const myObj = {
+//   name : "rafi",
+//   age : 22,
+//   id: 101,
+//   isLogin : false
+// }
+
+// for (const key in myObj) {
+// console.log(`key of myObj is ${key} and value is ${myObj[key]}`);
+// }
+
+const myArr = [2,34,56,67,77]
+
+// myArr.forEach((items,index,arr)=>{
+// console.log(items,index,arr);
+// })
+
+// function printMe(items) {
+//   console.log(items);
+  
+// }
+
+// myArr.forEach(printMe)
+
+// ++++++++++++ class 30 +++++++++++++++
+// High Order Array loops
+// filter 
+// map
+
+// let arr = [1,3,4,6,6,7,8]
+
+//  let filter = arr.filter((num)=> {
+// return num <= 5
+// })
+
+// console.log(filter);
+
+let users = [
+  {
+    "id": 1,
+    "name": "Leanne Graham",
+    "username": "Bret",
+    "email": "Sincere@april.biz",
+    "address": {
+      "street": "Kulas Light",
+      "suite": "Apt. 556",
+      "city": "Gwenborough",
+      "zipcode": "92998-3874",
+      "geo": {
+        "lat": "-37.3159",
+        "lng": "81.1496"
+      }
+    },
+    "phone": "1-770-736-8031 x56442",
+    "website": "hildegard.org",
+    "company": {
+      "name": "Romaguera-Crona",
+      "catchPhrase": "Multi-layered client-server neural-net",
+      "bs": "harness real-time e-markets"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Ervin Howell",
+    "username": "Antonette",
+    "email": "Shanna@melissa.tv",
+    "address": {
+      "street": "Victor Plains",
+      "suite": "Suite 879",
+      "city": "Wisokyburgh",
+      "zipcode": "90566-7771",
+      "geo": {
+        "lat": "-43.9509",
+        "lng": "-34.4618"
+      }
+    },
+    "phone": "010-692-6593 x09125",
+    "website": "anastasia.net",
+    "company": {
+      "name": "Deckow-Crist",
+      "catchPhrase": "Proactive didactic contingency",
+      "bs": "synergize scalable supply-chains"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Clementine Bauch",
+    "username": "Samantha",
+    "email": "Nathan@yesenia.net",
+    "address": {
+      "street": "Douglas Extension",
+      "suite": "Suite 847",
+      "city": "McKenziehaven",
+      "zipcode": "59590-4157",
+      "geo": {
+        "lat": "-68.6102",
+        "lng": "-47.0653"
+      }
+    },
+    "phone": "1-463-123-4447",
+    "website": "ramiro.info",
+    "company": {
+      "name": "Romaguera-Jacobson",
+      "catchPhrase": "Face to face bifurcated interface",
+      "bs": "e-enable strategic applications"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Patricia Lebsack",
+    "username": "Karianne",
+    "email": "Julianne.OConner@kory.org",
+    "address": {
+      "street": "Hoeger Mall",
+      "suite": "Apt. 692",
+      "city": "South Elvis",
+      "zipcode": "53919-4257",
+      "geo": {
+        "lat": "29.4572",
+        "lng": "-164.2990"
+      }
+    },
+    "phone": "493-170-9623 x156",
+    "website": "kale.biz",
+    "company": {
+      "name": "Robel-Corkery",
+      "catchPhrase": "Multi-tiered zero tolerance productivity",
+      "bs": "transition cutting-edge web services"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Chelsey Dietrich",
+    "username": "Kamren",
+    "email": "Lucio_Hettinger@annie.ca",
+    "address": {
+      "street": "Skiles Walks",
+      "suite": "Suite 351",
+      "city": "Roscoeview",
+      "zipcode": "33263",
+      "geo": {
+        "lat": "-31.8129",
+        "lng": "62.5342"
+      }
+    },
+    "phone": "(254)954-1289",
+    "website": "demarco.info",
+    "company": {
+      "name": "Keebler LLC",
+      "catchPhrase": "User-centric fault-tolerant solution",
+      "bs": "revolutionize end-to-end systems"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Mrs. Dennis Schulist",
+    "username": "Leopoldo_Corkery",
+    "email": "Karley_Dach@jasper.info",
+    "address": {
+      "street": "Norberto Crossing",
+      "suite": "Apt. 950",
+      "city": "South Christy",
+      "zipcode": "23505-1337",
+      "geo": {
+        "lat": "-71.4197",
+        "lng": "71.7478"
+      }
+    },
+    "phone": "1-477-935-8478 x6430",
+    "website": "ola.org",
+    "company": {
+      "name": "Considine-Lockman",
+      "catchPhrase": "Synchronised bottom-line interface",
+      "bs": "e-enable innovative applications"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Kurtis Weissnat",
+    "username": "Elwyn.Skiles",
+    "email": "Telly.Hoeger@billy.biz",
+    "address": {
+      "street": "Rex Trail",
+      "suite": "Suite 280",
+      "city": "Howemouth",
+      "zipcode": "58804-1099",
+      "geo": {
+        "lat": "24.8918",
+        "lng": "21.8984"
+      }
+    },
+    "phone": "210.067.6132",
+    "website": "elvis.io",
+    "company": {
+      "name": "Johns Group",
+      "catchPhrase": "Configurable multimedia task-force",
+      "bs": "generate enterprise e-tailers"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Nicholas Runolfsdottir V",
+    "username": "Maxime_Nienow",
+    "email": "Sherwood@rosamond.me",
+    "address": {
+      "street": "Ellsworth Summit",
+      "suite": "Suite 729",
+      "city": "Aliyaview",
+      "zipcode": "45169",
+      "geo": {
+        "lat": "-14.3990",
+        "lng": "-120.7677"
+      }
+    },
+    "phone": "586.493.6943 x140",
+    "website": "jacynthe.com",
+    "company": {
+      "name": "Abernathy Group",
+      "catchPhrase": "Implemented secondary concept",
+      "bs": "e-enable extensible e-tailers"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Glenna Reichert",
+    "username": "Delphine",
+    "email": "Chaim_McDermott@dana.io",
+    "address": {
+      "street": "Dayna Park",
+      "suite": "Suite 449",
+      "city": "Bartholomebury",
+      "zipcode": "76495-3109",
+      "geo": {
+        "lat": "24.6463",
+        "lng": "-168.8889"
+      }
+    },
+    "phone": "(775)976-6794 x41206",
+    "website": "conrad.com",
+    "company": {
+      "name": "Yost and Sons",
+      "catchPhrase": "Switchable contextually-based project",
+      "bs": "aggregate real-time technologies"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Clementina DuBuque",
+    "username": "Moriah.Stanton",
+    "email": "Rey.Padberg@karina.biz",
+    "address": {
+      "street": "Kattie Turnpike",
+      "suite": "Suite 198",
+      "city": "Lebsackbury",
+      "zipcode": "31428-2261",
+      "geo": {
+        "lat": "-38.2386",
+        "lng": "57.2232"
+      }
+    },
+    "phone": "024-648-3804",
+    "website": "ambrose.net",
+    "company": {
+      "name": "Hoeger LLC",
+      "catchPhrase": "Centralized empowering task-force",
+      "bs": "target end-to-end models"
+    }
+  }
+]
+
+// let filterData = users.filter((user)=>{
+// return user.id > 9
+// })
+// console.log(filterData)
+
+// let myNumbers = [7,8,9,10,7,4]
+// let val = myNumbers.map((num)=>{
+//   return num * 5
+// })
+// .map((num)=>{
+//   return num + 5
+// })
+// .filter((num)=>{
+//   return num >= 40
+// })
+
+
+// console.log(val)
+
+// let myNumbers = [1,2,3,4,5,6]
+
+// let redVal =myNumbers.reduce((accu, current)=>{
+//   console.log(`accu value is ${accu} and current vaue is ${current}`)
+  
+//   return accu + current
+// },0)
+// console.log(redVal)
+
+// const shoppingData = [
+//   {
+//     title: "jv",
+//     price : 1299
+//   },
+//   {
+//     title: "py",
+//     price : 2999
+//   },{
+//     title: "js",
+//     price : 4999
+//   },{
+//     title: "web and mob app",
+//     price : 10999
+//   },
+// ]
+
+// let totalToPay = shoppingData.reduce((accum,item)=>{
+
+//   return accum + item.price
+// },0)
+
+// console.log(totalToPay)
+
+
+// ++++++++++++++++++ class 36 ++++++++++++++++++++
+// Events in Javascript
+
+//type , timestamp, defaultPrevented
+// target, toElement , srcElement, currentTarget
+//clientX , clientY
+// screenX , screenY , altKey, ctrlKey, shiftKey, keyCode
+ // capturing and bubling
+// bubling mean bootom to top
+// capturing mean top to bootom
+
+// const btn = document.querySelector('button')
+// btn.addEventListener('click', (e)=>{
+//   console.log(e);
+  
+// },false)
+// console.log(btn);
+
+// ++++++++++++ class 37 ++++++++++++
+//Async Javascript fundamentals
+
+// javaScript => 
+// 1 - synchronous
+// 2 - single threaded
+// these two are default javascript behaviour
+// javascript is singlr threaded programing language that can be non-blocking
+// because they have only one call stack
+
+// blocking code vs non blocking code
+
+/*blocking code :
+block the prgram
+read file sync*/
+
+/* non blocking code :
+dot not block excution
+read file async */
+
+
+// =============== web apis =================
+// these all are not the part of javascript but these are part of browser
+// setTimeout
+// dom apis
+// fetch
+// localStorage
+// consoel
+// location
+
+
+
+// +++++++++++++++++ class 38 ++++++++++++++
+// 2 projects with Async JS
+
+// project 1
+// let startPrint;
+// document.querySelector('#start').addEventListener('click', function(){
+//   startPrint  = setInterval(function(){
+//  console.log('hello world');
+
+//   }, 1000)
+// })
+
+// document.querySelector('#stop').addEventListener('click', function(){
+//   clearInterval(startPrint)
+// })
+
+
+
+
+
+// ============== project 3 ===============
+
+// let insert = document.querySelector('#insert')
+
+// window.addEventListener('keydown', function(e){
+//   insert.innerHTML = `
+//   <div  style="text-align: center;">
+//   <table border="2px">
+//     <tr>
+//       <th>Key</th>
+//       <th>KeyCode</th>
+//       <th>Code</th>
+//     </tr>
+//     <tr>
+//       <td>${e.key === ' '? 'space': e.key}</td>
+//       <td>${e.keyCode}</td>
+//       <td>${e.code}</td>
+//     </tr>
+    
+//   </table>
+//   </div>
+//   ` 
+// })
+
+
+// +++++++++++++++++++ class 39 +++++++++++++++++
+// API request and V8 engine
+
+
+// +++++++++++++++++++ class 40 +++++++++++++++++
+// Promise in javascript
+
+// a promise is an object
+
+ // Q or Blue Bird library
+
+//  Promises ane se pehle async kam krne keliye ye do library use kiye jate the 
+
+// Promise create krna or Promise ko use krna
+ 
+// let promiseOne = new Promise((resolve,reject)=>{
+
+//   if(resolve){
+//     console.log('welcome');
+    
+//   } 
+//   if(reject){
+//     console.log('welcome kjfkdf');
+    
+//   }
+
+// })
+// console.log(promiseOne);
+
+
+// let promiseTwo = new Promise((resolve,reject)=>{
+//   let error = true
+//   if(!error){
+//     let username = "rafi"
+//     resolve(username)
+//   } else{
+//     error = true
+//     reject("errror")
+//   }
+// })
+
+// .then((data)=>{
+//   console.log(data);  
+// })
+// .catch((error)=>{
+//   console.log(error);
+  
+// })
+
+
+// data fetch with Promise
+
+const fetchData =  async ()=>{
+  try {
+  let data = await fetch('https://jsonplaceholder.typicode.com/users')
+  .then((res)=> res.json())
+  
+  console.log(data); 
+  } catch (error) {
+    console.log(error, "sdsdh");
+    
+  }
+    
+}
+
+fetchData()

@@ -1,0 +1,41 @@
+h1,h2{
+    text-align: center;
+}
+.color-boxes{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+#grey{
+    width: 150px;
+    height: 150px;
+    background-color: grey;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+#white{
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 8px;
+
+}
+#blue{
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+    border: 1px solid black;
+    border-radius: 8px;
+
+}
+#yellow{
+    width: 150px;
+    height: 150px;
+    background-color: yellow;
+    border: 1px solid black;
+    border-radius: 8px;
+
+}
