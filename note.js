@@ -1334,7 +1334,6 @@ read file async */
 // a promise is an object
 
  // Q or Blue Bird library
-
 //  Promises ane se pehle async kam krne keliye ye do library use kiye jate the 
 
 // Promise create krna or Promise ko use krna
@@ -1376,17 +1375,76 @@ read file async */
 
 // data fetch with Promise
 
-const fetchData =  async ()=>{
-  try {
-  let data = await fetch('https://jsonplaceholder.typicode.com/users')
-  .then((res)=> res.json())
+// const fetchData =  async ()=>{
+//   try {
+//   let data = await fetch('https://jsonplaceholder.typicode.com/users')
+//   .then((res)=> res.json())
   
-  console.log(data); 
-  } catch (error) {
-    console.log(error, "sdsdh");
+//   console.log(data); 
+//   } catch (error) {
+//     console.log(error, "sdsdh");
     
-  }
+//   }
     
-}
+// }
 
-fetchData()
+// fetchData()
+
+// +++++++++++++ class 41 ++++++++++++
+// Now you know fetch in javascript
+
+
+// ============= fetch ==========
+// The Fetch API provides an interface for fetching resources (including across the network).
+//  It is a more powerful and flexible replacement for XMLHttpRequest.
+
+// 1 - task queue
+// 2 - queueMicrotask- ye sirf fetch keliye bnta hai./ fetch se jo bhi kam hota hain wo 
+// micro task queue ke andr ajata hain
+
+// === AJAX ===
+// async JAVASCRIPT AXML => UMBRELLA TERM - YE PEHLE USE HOTA THA JP HUM REQUEST
+// XML KE ZARIYE SE KRTE THE
+
+
+// FTCH KO HUM API SE DATA GET KRNE YA SEND KRNE KELIYE USE KRTE 
+// HAI YE HUME RETURN MAI EK PROMISE RETURN KRTA HAI JISME RESOLVE 
+// OR REJECT DONO HOTE HAI
+
+// Description
+// The fetch() method starts the process of fetching a resource from a server.
+// The fetch() method returns a Promise that resolves to a Response object.
+
+
+// +++++++++++++ class 42 +++++++++++
+// Object Oriented in Javascript
+
+// ### JAVASCRIPT AND CLASSES
+// # OOP
+
+// ISKA MTLB HAI K APKA CODE LIKNE KATRUCTURE KAISA HOTA HAI
+
+// constructure function
+// ye hme hr br ek naya instanse deta hai
+
+// function User(username, userId, userLogin){
+
+//   this.username = username;
+//   this.userId = userId;
+//   this.userLogin = userLogin
+
+// return this
+// }
+
+// let userOne = new User("rafi", 1001, true)
+// let userTwo =  User("same", 1002, false)
+
+// console.log(userOne);
+// console.log(userTwo);
+
+// ## jaise hum (new) ka keyword use krte hai to hamare pass ek empty object 
+// create hota hai jisko instance kaha jata hai
+// let aa = new Promise()
+// let ab = new Date()
+// ## ye jo new ka keyword hai ye constructur function hai jiske madad se hum objects banate hai
+
